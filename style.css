@@ -1,32 +1,99 @@
-body{
+body {
+    box-sizing: border-box;
     background: #37c7c7;
     font-family: 'Ubuntu', sans-serif;
 }
-h1{
+
+h1 {
     text-align: center;
 }
 
-form{
+form {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     width: 50%;
     margin: 0 auto;
+    padding-left: 2rem;
     background: #fbfafb;
 }
-p{
+
+@media (max-width: 1280px) {
+    form {
+        width: 75%;
+    }
+}
+
+@media (max-width: 880px) {
+    form {
+        width: 90%;
+    }
+}
+
+p {
+    margin: 2rem 0;
     flex-basis: 100%;
     text-align: center;
 }
-label{
-    flex-basis: 50%;
-    text-align: right;
+
+label {
+    display: flex;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
 }
-input{
+
+label>input {
+    width: 276px;
+    height: 30px;
+    padding-left: 5px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: textfield;
+    margin: 0;
+    padding: 0;
+}
+
+span {
+    flex-basis: 45%;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+@media (max-width: 700px) {
+    span {
+        flex-basis: 100%;
+        text-align: left;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.groupInputs input {
     margin-bottom: 1rem;
 }
 
-button{
-    flex-basis: 100%;
-    
+@media (max-width: 700px) {
+    .groupInputs input {
+        margin-bottom: 0.5rem;
+    }
 }
 
+.lastInput {
+    margin-bottom: 0 !important;
+}
+
+button {
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background: #039ef8;
+    color: #fbfafb;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 0;
+}
+@media (max-width: 700px) {
+    button {
+        margin: 1rem auto;
+    }
+}
